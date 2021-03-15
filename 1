@@ -1,0 +1,41 @@
+#include<iostream>
+
+using namespace std;
+
+int calculator(int n1,int n2,char operator1)
+{
+    int answer;
+    if (operator1 == '+')
+    {
+        answer = n1 + n2;
+    }
+    else if (operator1 == '-')
+    {
+        if(n1>n2)
+        {
+            answer = n1 - n2;
+        }
+        else
+        {
+        answer = n2 - n1;
+        }        
+    }
+    else if (operator1 == '*')
+    {
+        answer = n1 * n2;
+    }
+    else if (operator1 == '/')
+    {
+        answer = n1 / n2;
+    }
+    else
+    {
+        cout << "Invalid operator";
+    }
+    return answer;
+}
+int main()
+{
+    cout << calculator(5,8,+);
+    return 0;
+}
