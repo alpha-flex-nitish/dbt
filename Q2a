@@ -1,0 +1,52 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+
+    int n, i, ar[i], sum = 0;
+    bool printSum = 1;
+    cin >> n;
+    if(1<=n&&n<=1000)
+    {
+       for (i=0;i<n;)
+       {
+        cin >> ar[i];
+
+        if(1<=ar[i]&&ar[i]<=1000)
+            {
+            i++;
+            }
+        else {
+             i=n;
+            //cout << "invalid input";
+            printSum = 0;
+             }
+       }
+
+    }
+
+
+    else{
+       // cout << "invalid input";
+        printSum = 0;
+
+        }
+
+    if (printSum)
+        {
+
+            for (i=0;i<n;i++)
+            {
+                sum += ar[i];
+            }
+            cout << sum;
+        }
+    else{
+        cout << "invalid input";
+        }
+
+    return 0;
+}
