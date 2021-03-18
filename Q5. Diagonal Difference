@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-        int i, j, n, arr[10][10], sumlr=0, sumrl=0, diff = 0;
+        int i, j, n, arr[1000][1000], sumlr=0, sumrl=0, diff = 0;
         bool input = true;
         cin >> n ;
 
