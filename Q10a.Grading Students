@@ -1,0 +1,50 @@
+#include <iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+int i;
+int g[i], n;
+
+
+cin >> n;
+if(n>=1&&n<=60){
+
+for(i=0;i<n;i++){
+cin >> g[i];
+}
+
+for(i=0;i<n;i++){
+    if(g[i]>=0&&g[i]<38){
+        g[i]=g[i]+0;
+    }
+    else if(g[i]>=38&&g[i]<=100){
+
+        if(g[i]%5==0){
+                g[i]=g[i]+0;
+        }
+        else if(g[i]%5!=0){
+            if(g[i]%5<3){
+                g[i]=g[i]+0;
+            }
+            else if(g[i]%5>=3){
+                g[i] = ((g[i]/5)+1)*5;
+            }
+        }
+        else
+        {
+            cout << "invalid input";
+        }
+        
+    }
+
+}
+}
+else{
+    cout << "invalid input";}
+for(i=0;i<n;i++){
+cout << g[i] << endl;
+}
+return 0;
+}
