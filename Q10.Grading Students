@@ -1,0 +1,62 @@
+#include <iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+int i;
+int grades[i], n;
+bool pri = true;
+
+cin >> n;
+
+for(i=0;i<n;i++){
+        cin >> grades[i];
+}
+for(i=0;i<n;i++){
+        cout << grades[i] << endl;
+}
+/*
+if(grades[i]%5==0||grades[i]<40||grades[i]%5>=3)
+{
+    grades[i] = grades[i];
+}
+else if(grades[i]%5<3&&grades[i]%5!=0)
+{
+    grades[i] = ((grades[i]/5)+1)*5;
+}
+
+
+for(i=0;i<n;i++){
+if (grades[i]>=0&&grades[i]<=100){
+    pri = true;
+}
+else{
+    pri = false;
+}
+}
+
+if (n>=1&&n<=60){
+    pri = true;
+}
+else{
+    pri = false;
+}
+
+if(pri==true){
+    for (i=0;i<n;i++)
+        {
+            cout << grades[i] << endl;
+        }
+}
+else{
+    cout << "invalid input";
+}
+
+for(i=0;i<n;i++)
+        {
+            cout << grades[i] << endl;
+        }
+        */
+return 0;
+}
