@@ -1,0 +1,49 @@
+#include <iostream>
+#include<cmath>
+#include<ctime>
+#include<bits/stdc++.h>
+#include<string>
+
+using namespace std;
+
+int main() {
+
+string inptime, hh, mm, ss;
+string xm;
+cin >> inptime;
+// 07:45:05PM
+
+hh = inptime.substr(0, 2);
+// hh = inptime[0, 2];
+
+mm = inptime.substr(3, 2);
+// mm = inptime[3, 2];
+
+ss = inptime.substr(6, 2);
+// ss = inptime[6, 2];
+
+xm = inptime.substr(8, 2);
+// xm = inptime[8, 2];
+
+
+
+int newhh;
+
+newhh = stoi(hh);
+
+if (xm=="PM"){
+    newhh = 12 + newhh;
+}
+else if (xm=="AM"){
+    newhh = newhh;
+}
+if(xm=="AM"&&hh=="12"){
+    cout << "00" << ":" << mm << ":" << ss;
+}else if(xm=="PM"&&hh=="12"){
+    cout << "12" << ":" << mm << ":" << ss;
+}
+else{
+cout << newhh << ":" << mm << ":" << ss;
+}
+    return 0;
+}
