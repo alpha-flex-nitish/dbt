@@ -1,0 +1,62 @@
+#include <iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+int s=0, t=0, a=0, b=0, m=0, n=0, i=0, j=0, ap[i], orn[j], tr = 0, sa=0, so=0, k=0;
+
+cin >> s >> t;
+cin >> a >> b;
+cin >> m >> n;
+
+
+for (i=0;i<=m;i++){
+    cin >> ap[i];
+}
+for (j=0;j<=n;j++){
+    cin >> orn[j];
+}
+
+
+if((s>=1&&s<=100000)&&(t>=1&&t<=100000)&&(a>=1&&a<=100000)&&(b>=1&&b<=100000)&&(m>=1&&m<=100000)&&(n>=1&&n<=100000)&&(a<s)&&(s<t)&&(t<b))
+{
+    for (i=0;i<m;i++){
+        if((ap[i]>-100000)&&(ap[i]<100000)){
+              for (i=0;i<m;i++ ){
+                if((orn[i]>-100000)&&(orn[i]<100000)){
+                    tr = 1;
+                }
+                else{
+                    cout << "invalid input";
+                }
+              }
+
+        }
+        else
+        {
+            cout << "invalid input";
+        }
+    }
+}
+else{
+    cout << "invalid input";
+}
+    if(tr==1){
+        for(i=0;i<m;i++){
+            if((a+ap[i]<=t)&&(a+ap[i]=>s)){
+                sa+=1;}
+
+        else{k++;}
+        }
+        for(j=0;j<n;j++){
+            if((b+orn[j]<=t)&&(b+orn[j]=>s)){
+                so+=1;}
+                else{k++;}
+        }
+    }
+    else{k++;}
+    cout << sa << endl << so;
+
+return 0;
+}
