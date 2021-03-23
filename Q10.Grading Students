@@ -5,30 +5,27 @@ using namespace std;
 
 int main() {
 int i;
-int grades[i], n;
+int g[i], n;
 bool pri = true;
 
 cin >> n;
 
 for(i=0;i<n;i++){
-        cin >> grades[i];
+        cin >> g[i];
 }
-for(i=0;i<n;i++){
-        cout << grades[i] << endl;
-}
-/*
-if(grades[i]%5==0||grades[i]<40||grades[i]%5>=3)
+
+if(g[i]<38||g[i]%5==0||(g[i]%5)<3&&g[i]>40)
 {
-    grades[i] = grades[i];
+    g[i] = g[i] + 0;
 }
-else if(grades[i]%5<3&&grades[i]%5!=0)
+else if((g[i]>38)&&(g[i]%5)>=3&&g[i]%5!=0)
 {
-    grades[i] = ((grades[i]/5)+1)*5;
+    g[i] = ((g[i]/5)+1)*5;
 }
 
 
 for(i=0;i<n;i++){
-if (grades[i]>=0&&grades[i]<=100){
+if (g[i]>=0&&g[i]<=100){
     pri = true;
 }
 else{
@@ -46,17 +43,13 @@ else{
 if(pri==true){
     for (i=0;i<n;i++)
         {
-            cout << grades[i] << endl;
+            cout << g[i] << endl;
         }
 }
 else{
     cout << "invalid input";
 }
 
-for(i=0;i<n;i++)
-        {
-            cout << grades[i] << endl;
-        }
-        */
+
 return 0;
 }
