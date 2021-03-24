@@ -1,0 +1,89 @@
+#include <iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+int n, m, i, j, a[i], b[j], t, c=0, d=0, ans=0;
+int proceed = 0;
+
+    cin >> n >> m;
+
+    for(i=0;i<n;i++){
+        cin >> a[i];
+    }
+    for(j=0;j<m;j++){
+        cin >> b[j];
+    }
+
+if((n>=1)&&(n<=10)&&(m>=1)&&(m<=10)){
+    for(i=0;i<n;i++){
+        if((a[i]>=1)&&(a[i]<=100)){
+            proceed = 1;
+        }
+        else{
+            proceed = 0;
+            i = n;
+        }
+    }
+    for(j=0;j<m;j++){
+        if((b[j]>=1)&&(b[i]<=100)){
+            proceed = 1;
+        }
+        else{
+            proceed = 0;
+            j = m;
+        }
+    }
+}
+
+else {
+    cout << "invalid input";
+}
+
+if(proceed==1){
+        for(t=a[n-1];t<=b[0];t++){
+            for(j=0;j<m;j++){
+                if(b[j]%t==0){
+                    c++;
+                }
+                else if(b[j]%t!=0)
+                {
+                    j = m;
+                    c = 0;
+                }
+            }
+            if(c==m){
+                for(i=0;i<n;i++){
+                    if(t%a[i]==0){
+                        d++;
+                    }
+                    else if(t%a[i]!=0){
+                        i = n;
+                        d = 0;
+                    }
+                    if(d==n){
+                        ans++;
+                    }
+                    else if(d!=n){
+                        i = n;
+                        d = 0;
+                    }
+                }
+            }
+            else if(c!=m){
+                cout << "0";
+            }
+        }
+
+
+
+    }
+
+else if(proceed==0){
+    cout << "invalid input";
+}
+cout << ans;
+return 0;
+}
