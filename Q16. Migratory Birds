@@ -1,0 +1,71 @@
+#include<iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+        int n=0, i=0, a=0, b=0, c=0, d=0, e=0, maxs=0;
+        cin >> n;
+
+        int ar[n];
+        for (i=0;i<n;i++){
+            cin >> ar[i];
+        }
+
+
+        if((n>=5)&&(n<=200000)){
+            for(i=0;i<n;i++){
+                    switch(ar[i]){
+            case 1 :
+                a++;
+                
+                break;
+            case 2 :
+                b++;
+                break;
+            case 3:
+                c++;
+                break;
+            case 4:
+                d++;
+                break;
+            case 5:
+                e++;
+                break;
+                    }
+            }
+        }
+        else{
+            cout << "invalid input";
+        }
+
+        if((a>=b)&&(a>=c)&&(a>=d)&&(a>=e)){
+            cout << a;
+        }
+        else if((b>=c)&&(b>=d)&&(b>=e)&&(b>=a)){
+            cout << b;
+        }
+        else if((c>=d)&&(c>=e)&&(c>=a)&&(c>=b)){
+            cout << c;
+        }
+        else if((d>=e)&&(d>=a)&&(d>=b)&&(d>=c)){
+            cout << d;
+        }
+        else if((e>=a)&&(e>=b)&&(e>=c)&&(e>=d)){
+            cout << e;
+        }
+
+
+
+
+
+
+
+     /* cout << "1 : "  << one << endl;
+        cout << "2 : "  << two << endl;
+        cout << "3 : "  << three << endl;
+        cout << "4 : "  << four << endl;
+        cout << "5 : "  << five << endl;
+*/
+    return 0;
+}
