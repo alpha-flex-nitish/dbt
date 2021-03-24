@@ -39,9 +39,11 @@ int main() {
                 for(j=i+1;j<n;j++){
                         if((ar[i]+ar[j])==k){
                             ans++;
+                            //cout << "("<< i << "," << j<< ")" << endl;
                         }
                         else {
                             m++;
+                            //cout << "("<< i << "," << j<< ")" << endl;
                         }
             }
 
