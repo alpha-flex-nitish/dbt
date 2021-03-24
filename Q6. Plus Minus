@@ -5,13 +5,13 @@ using namespace std;
 
 int main(){
 
-    int n;
-    int i, ar[i], pos, neg, zer;
+    int n=0, i=0;
+    float pos=0, neg=0, zer=0;
 
     cin >> n;
        //cout << n;
-
-    if(0<n&&n<=100)
+    int ar[n];
+    if(n>0&&n<=100)
     {
 
     for(i=0;i<n;i++)
@@ -29,33 +29,32 @@ int main(){
     for(i=0;i<n;i++)
     {
 
-    if(-100<=ar[i]&&ar[i]<=100)
+    if(ar[i]>=-100&&ar[i]<=100)
     {
         if(ar[i]==0)
         {
-            cout << " zero-" << i;
+           // cout << " zero-" << i;
+           zer = zer + 1 ;
         }
-        else if(0<ar[i])
+        else if(ar[i]>0)
         {
-            cout << " positive-" << i;
+            // cout << " positive-" << i;
+            pos = pos + 1;
         }
         else if(ar[i]<0)
         {
-            cout << " negative-" << i;
+            // cout << " negative-" << i;
+            neg = neg + 1;
         }
     }
     else
     {
         cout << "invalid input--ar[]";
     }
-
+    
     }
 
-    for(i=0;i<n;i++)
-
-    {
-        cout << ar[i];
-    }
+    cout << pos/n << endl << neg/n << endl << zer/n;
     return 0;
 
 }
