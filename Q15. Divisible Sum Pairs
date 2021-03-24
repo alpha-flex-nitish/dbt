@@ -1,0 +1,55 @@
+#include<iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+        int n=0, k=0, i=0, j=0, proceed = 0, m=0, ans=0;
+
+        cin >> n >> k;
+
+        int ar[n];
+
+        for(i=0;i<n;i++){
+            cin >> ar[i];
+        }
+        if((n>=2)&&(n<=100)){
+                if((k>=1)&&(k<=100)){
+                        for(i=0;i<n;i++){
+                        if((ar[i]>=1)&&(ar[i]<=100)){
+                            proceed = 1;
+                        }
+                        else{
+                            proceed = 0;
+                            
+                        }
+                        }
+                }
+                else {
+                    proceed = 0;
+                }
+        }
+        else {
+            proceed = 0;
+        }
+
+ 
+        if(proceed==1){
+            for(i=0;i<n;i++){
+                for(j=i+1;j<n;j++){
+                        if((ar[i]+ar[j])==k){
+                            ans++;
+                        }
+                        else {
+                            m++;
+                        }
+            }
+
+        }
+        }
+        else if(proceed==0){
+            cout << "invalid input";
+        }
+        cout << ans;
+    return 0;
+}
