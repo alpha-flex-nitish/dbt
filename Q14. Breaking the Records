@@ -6,8 +6,9 @@ using namespace std;
 
 int main() {
     int n=0, i=0, proceed=0, br=0, ls=0, maxs=0, mins=0, nomax=0, nomin=0;
-    int s[i];
+    
     cin >> n;
+    int s[n];
 
 
     for(i=0;i<n;i++){
