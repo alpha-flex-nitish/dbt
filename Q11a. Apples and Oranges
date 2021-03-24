@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-int s=0, t=0, a=0, b=0, m=0, n=0, i=0, j=0, tr = 0, sa=0, so=0, k=0;
+int s, t, a, b, m, n, i, j, tr = 0, sa=0, so=0, k=0;
 
 cin >> s >> t;
 cin >> a >> b;
@@ -44,19 +44,20 @@ else{
 }
     if(tr==1){
         for(i=0;i<m;i++){
-            if((a+ap[i]<=t)&&(a+ap[i]=>s)){
-                sa+=1;}
+            if((a+ap[i]<=t)&&(a+ap[i]>=s)){
+                sa = sa + 1;}
 
         else{k++;}
         }
         for(j=0;j<n;j++){
-            if((b+orn[j]<=t)&&(b+orn[j]=>s)){
-                so+=1;}
+            if((b+orn[j]<=t)&&(b+orn[j]>=s)){
+                so = so + 1;}
                 else{k++;}
         }
     }
-    else{k++;}
+    else if (tr!=1){k++;}
     cout << sa << endl << so;
 
 return 0;
 }
+
