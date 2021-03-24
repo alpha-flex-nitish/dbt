@@ -4,10 +4,10 @@
 using namespace std;
 int main()
 {
-    long long int n, i, ar[i], sum=0;
+    long long int n=0, i=0, sum=0;
 
     cin >> n;
-
+    long long int ar[n];
     if(1<=n&&n<=10){
 
         for(i=0;i<n;i++)
@@ -20,15 +20,10 @@ int main()
            else{
                i = n+1;
                cout << "invalid input";
-
            }
-           if(i==n+1){
-
-           }
-           else{
-            cout << sum;
-           }
+           
         }
+        cout << sum;
     }
     else{
         cout << "invalid input";
