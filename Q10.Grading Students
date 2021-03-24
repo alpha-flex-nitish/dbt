@@ -9,7 +9,7 @@ int n;
 bool pri = true;
 
 cin >> n;
-int g[i];
+int g[n];
 for(i=0;i<n;i++){
         cin >> g[i];
 }
