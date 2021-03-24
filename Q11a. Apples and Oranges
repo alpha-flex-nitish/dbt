@@ -4,12 +4,12 @@
 using namespace std;
 
 int main() {
-int s=0, t=0, a=0, b=0, m=0, n=0, i=0, j=0, ap[i], orn[j], tr = 0, sa=0, so=0, k=0;
+int s=0, t=0, a=0, b=0, m=0, n=0, i=0, j=0, tr = 0, sa=0, so=0, k=0;
 
 cin >> s >> t;
 cin >> a >> b;
 cin >> m >> n;
-
+int ap[n], orn[m];
 
 for (i=0;i<=m;i++){
     cin >> ap[i];
