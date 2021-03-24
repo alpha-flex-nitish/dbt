@@ -4,8 +4,8 @@
 using namespace std;
 
 int main(){
-        int i, a[i], b[i], n=3, aP=0, bP=0;
-
+        int i=0, n=3, aP=0, bP=0;
+        int  a[3], b[3];
         for(i=0;i<n;i++)
         {
             cin >> a[i];
