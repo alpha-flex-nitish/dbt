@@ -5,11 +5,11 @@ using namespace std;
 
 int main() {
 int i;
-int g[i], n;
+int n;
 bool pri = true;
 
 cin >> n;
-
+int g[i];
 for(i=0;i<n;i++){
         cin >> g[i];
 }
