@@ -1,0 +1,100 @@
+#include<iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+
+using namespace std;
+//ascii[a-z set karna h..hogya
+//test case 5 and 10 wrong
+
+int main(){
+
+            string s, t;
+            int k=0, i=0, p=1, c=0, d=0;
+            cin >> s;
+            cin >> t;
+            cin >> k;
+            int l=0, m=0;
+            l = s.length();
+            m = t.length();
+            string  s1[l], t1[m];
+
+            for(i=0;i<l;i++){
+                    s1[i] = s[i];
+            }
+            for(i=0;i<m;i++){
+                    t1[i] = t[i];
+            }
+            if((l>=1)&&(l<=100)&&(m>=1)&&(m<=100)&&(k>=1)&&(k<=100)){
+                for(i=0;i<l;i++){
+                    if((s1[i]>="a"&&s1[i]<="z")){
+                        p = 1;
+                        }
+                    else{
+                        p = 0;
+                        i = l;
+                    }
+                }
+                if(p==1){
+                 for(i=0;i<m;i++){
+                    if(t1[i]>="a"&&t1[i]<="z"){
+                        p =1;
+                    }
+                    else{
+                        p = 0;
+                        i = m;
+                    }
+                    }
+                }
+                else{
+                    p = 0;
+                }
+        }
+            else{
+                p = 0;
+            }
+            if(p==1){
+                    if(l<m){
+                        for(i=0;i<l;i++){
+                            if(s1[i]==t1[i]){
+                                c++;
+                            }
+                            else{
+                                i = l;
+                            }
+
+                        }
+
+                            if(l-c+m-c<=k){
+                                cout << "Yes";
+                            }
+                            else {
+                                cout << "No";
+                            }
+                    }
+                    else{
+                        for(i=0;i<m;i++){
+                            if(s1[i]==t1[i]){
+                                d++;
+                            }
+                            else{
+                                i = m;
+                            }
+
+                        }
+                            if(l-d+m-d<=k){
+                                cout << "Yes";
+                            }
+                            else {
+                                cout << "No";
+                            }
+                    }
+            }
+            else{
+                cout << "invalid input";
+            }
+
+
+
+
+return 0;
+}
