@@ -1,0 +1,56 @@
+#include<iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main(){
+        long int i=0, t=0, p=0, ans=0;
+        cin >> t;
+        long int n[t], m[t], s[t];
+        for(i=0;i<t;i++){
+            cin >> n[i] >> m[i] >>  s[i];
+        }
+
+        for(i=0;i<t;i++){
+            if((t>=1)&&(t<=100)&&(n[i]>=1)&&(n[i]<=1000000000)&&(m[i]>=1)&&(m[i]<=1000000000)&&(s[i]>=1)&&(s[i]<=n[i])){
+                p=1;
+            }
+            else{
+                p=0;
+                cout << "i = " << i << endl;
+                
+            }
+        }
+        long int r[t];
+        if(p==1){
+
+            for(i=0;i<t;i++){
+
+                    r[i] = m[i]%n[i];
+
+                    ans = s[i] + r[i] - 1;
+                    if( ans<n[i]){
+                    cout << ans << endl;
+                    }
+                    else{
+                        ans = (r[i] + s[i])% n[i] - 1;
+                        if(ans==0){
+                            cout << s[i] << endl;
+                        }
+                        else{
+                             cout << ans << endl;
+                        }
+                    }
+            }
+            
+        }
+        else{
+            cout << "invalid input";
+        }
+
+
+
+return 0;
+}
