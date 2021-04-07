@@ -1,0 +1,102 @@
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n=0, m=0, i=0, j=0, k=0, p=1, no=0, kmax=0, yes =1, ans=0;
+    cin >> n >> m;
+    string g[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++){
+            cin >> g[i][j];
+        }
+    }
+    if(n>=2&&n<=15&&m>=2&&m<=15){
+       p = 1;
+       cout << "1";
+    }
+    else{
+        p = 0;
+    }
+    int pl[17];
+    for(i=0;i<17;i++){
+        pl[i] = 0;
+        cout << "2";
+    }
+
+    if(p==1){
+        for(i=0;i<n;i++){
+                for(j=0;j<m;j++){
+                        if(g[i][j]=="G"){
+                                for(k=0;k<9;k++){
+                                    if(i-k>=0&&j-k>=0&&i+k<15&j+k<15){
+                                        if(g[i-k][j]=="G"&&g[i][j-k]=="G"&&g[i+k][j]=="G"&&g[i][j+k]=="G"){
+                                            pl[k*2+1]++;
+                                            cout << "3";
+                                        }
+                                        else{
+                                            no++;
+                                        }
+                                    }
+                                    else{
+                                        no++;
+                                    }
+                                }
+
+                        }
+                        else{
+                            no++;
+                        }
+        }
+        }
+        for(i=0;i<n;i++){
+            for(j=0;j<m;j++){
+                if(g[i][j]!="G"){
+                    yes = 1;
+                    cout << "4";
+                }
+                else{
+                    yes = 0;
+                    j = m;
+                    i = n;
+                }
+            }
+        }
+        if(yes==1){
+            ans = 0;
+            cout << "5";
+        }
+        else{
+            for(i=17;i>=0;i--){
+                if(pl[i]!=0&&pl[i]>1){
+                    ans = (2*i-1)*(2*i-1);
+                    j = -1;
+                    i = -1;
+                    cout << "6";
+                }
+                else if(pl[i]!=0&&pl[i]==1){
+                    for(j=i-1;j>=0;j--){
+                        if(pl[j]!=0){
+                            ans = (2*i-1)*(2*j-1);
+                            j = -1;
+                            i = -1;
+                            cout << "7";
+                        }
+                        else{
+                            no++;
+                        }
+                    }
+                }
+            }
+        }
+        cout << ans;
+        cout << "8";
+    }
+    else{
+        cout << "invalid input";
+    }
+return 0;
+
+}
