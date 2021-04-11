@@ -1,0 +1,68 @@
+#include<iostream>
+#include<cmath>
+#include<string>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+   int k=0, a=0, b=0, p=1, in=0, jn=0, z=0, ans=0, diff=0;
+    string i, j, x;
+   cin >> i >> j >> k;
+   in = stoi(i);
+   jn = stoi(j);
+   if(in>=1&&jn>=in&&jn<=2000000&&k>=1&&k<=2000000000){
+    p = 1;
+   }
+   else{
+    p = 0;
+   }//i = "1546"
+   //6451
+   int l=0, e=0;
+   string revb[l];
+   in = stoi(i);//1546
+   jn = stoi(j);
+   string bs;
+    int revbinttogether=0;
+   if(p==1){
+        for(b=in;b<=jn;b++){//1546
+        bs = to_string(b);//bs="1546"
+        l = bs.length();
+         for(a=0;a<l;a++){
+            revb[a] = bs[l-a];
+         }//revb[0] 1 2 3 = "1" "5" "4" "6"
+         int revbint[l];
+         for(z=0;z<l;z++){
+            x = revb[z];
+            revbint[z] = stoi(x);
+         }//revbint[0] 1 2 3 = 1 5 4 6
+         revbinttogether=0;
+         for(e=0;e<l;e++){
+            revbinttogether = revbinttogether + (revbint[e])*pow(10, (l-e-1));
+         }
+         //revbint[0]*(pow(10,l-1))+revbint[1]*(pow(10,l-2))+revbint[2]*(pow(10,l-3))+revbint[3]*(pow(10,l-4))
+        //string togetherrevb;
+        //togetherrevb = ()
+        diff = 0;
+         if(b>=revbinttogether){
+            diff = b-revbinttogether;
+         }
+         else{
+            diff = -b+revbinttogether;
+         }
+         if(diff%k==0){
+            ans++;
+         }
+         else{
+            ans+=0;
+         }
+       }
+       cout << ans<< endl;
+       int *pans = &ans;
+       cout << pans;
+   }
+   else{
+    cout << "invalid input";
+   }
+return 0;
+
+}
