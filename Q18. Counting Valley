@@ -1,12 +1,15 @@
+
 #include<iostream>
 #include<cmath>
+#include<string>
 #include<bits/stdc++.h>
+
 using namespace std;
 
 int main() {
-        int i, n, ans=0, proceed=0, sum=0, no=0;
+        int i=0, n=0, ans=0, proceed=0, sum=0, no=0;
         cin >> n;
-        string s;
+        string s = "j";
         cin >> s;
         int value[n];
         string move[n];
