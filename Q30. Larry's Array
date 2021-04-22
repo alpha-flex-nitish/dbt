@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cmath>
+#include<bits/stdc++.h>
+
+using namespace std;
+int main(){
+    int t=0, i=0, j=0, m=0;
+    cin >> t;
+    cout << "t = " << t << endl;
+    int n[t];
+    for(i=0;i<t;i++){
+        cin >> n[i];
+        int c[i];
+        m = n[i];
+        int a[1][m];
+        c[i] = a[1][m];
+        cin >> a[1][m];
+    }
+    for(i=0;i<t;i++){
+        cout << "n[" << i << "] = " << n[i] << endl;
+    }
+    for(i=0;i<t;i++){
+        int a[1][m];
+        //int c[i];
+        cout << "a[1][" << m << "] = " <<a[1][m] << endl;
+        //cout << "c[" << i << "] = " <<c[i] << endl;
+    }
+
+return 0;
+}
